@@ -1,0 +1,10 @@
+.user-error__div {
+    @import url("~ngx-smart-modal/ngx-smart-modal.css");
+
+    @import "./plugins/ngx-smart-modal";
+    @import "./plugins/ng-select";
+
+    .submitted-form .ng-invalid:not(form):not(div) {
+        border: 1px solid lightcoral;
+    }
+}

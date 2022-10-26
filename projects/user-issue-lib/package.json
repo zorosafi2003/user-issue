@@ -1,0 +1,16 @@
+{
+  "name": "user-issue-lib",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.1.13",
+    "@angular/core": "^9.1.13"
+  },
+  "dependencies": {
+    "@ng-stack/forms": "^1.3.0",
+    "ng6-toastr-notifications": "^1.0.4",
+    "ngx-capture": "0.0.4-beta",
+    "ngx-smart-modal": "^7.2.1",
+    "@ng-select/ng-select": "^3.0.7",
+    "tslib": "^1.10.0"
+  }
+}

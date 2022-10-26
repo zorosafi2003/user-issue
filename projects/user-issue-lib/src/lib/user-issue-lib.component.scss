@@ -1,0 +1,152 @@
+
+@import url('../../assets/style.scss');
+
+#small-chat {
+    position: fixed;
+    z-index: 5000;
+    bottom: 50px;
+    right: 50px;
+  }
+  
+  #small-chat .badge {
+    position: absolute;
+    top: -3px;
+    right: -4px;
+  }
+  
+  .open-small-chat {
+    height: 38px;
+    width: 38px;
+    display: block;
+    background: #ff0000;
+    padding: 9px 8px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+  
+    .fa {
+      font-size: 13px;
+    }
+  }
+  
+  .open-small-chat:hover {
+    color: white;
+    background: #ff0000b0;
+  }
+  
+  .small-chat-box {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 75px;
+    background: #fff;
+    border: 1px solid green;
+    min-width: 250px;
+    min-height: 430px;
+    border-radius: 4px;
+    z-index: 5000;
+  }
+  
+  .small-chat-box.ng-small-chat {
+    display: block;
+  }
+  
+  .body-small {
+    .small-chat-box {
+      bottom: 70px;
+      right: 20px;
+    }
+  }
+  
+  .small-chat-box.active {
+    display: block;
+  }
+  
+  .small-chat-box {
+    .heading {
+      background: green;
+      padding: 8px 15px;
+      font-weight: bold;
+      color: #fff;
+    }
+  
+    .chat-date {
+      opacity: 0.6;
+      font-size: 10px;
+      font-weight: normal;
+    }
+  
+    .content {
+      padding: 15px 15px;
+  
+      .author-name {
+        font-weight: bold;
+        margin-bottom: 3px;
+        font-size: 11px;
+      }
+  
+      >div {
+        padding-bottom: 20px;
+      }
+  
+      .chat-message {
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+        line-height: 14px;
+        max-width: 80%;
+        background: #f3f3f4;
+        margin-bottom: 10px;
+      }
+  
+      .chat-message.active {
+        background: #1ab394;
+        color: #fff;
+      }
+  
+      .left {
+        text-align: left;
+        clear: both;
+  
+        .chat-message {
+          float: left;
+        }
+      }
+  
+      .right {
+        text-align: right;
+        clear: both;
+  
+        .chat-message {
+          float: right;
+        }
+      }
+    }
+  
+    .form-chat {
+      padding: 10px 10px;
+    }
+  }
+  
+  .label-warning,
+  .badge-warning {
+    background-color: #f8ac59;
+    color: #ffffff;
+  }
+  
+  .badge {
+    color: #5e5e5e;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    padding-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-shadow: none;
+    white-space: nowrap;
+  }
+  
+  
+  :host ::ng-deep ngx-smart-modal .overlay.nsm-overlay-open {
+    background-color: unset !important;
+  }

@@ -1,0 +1,132 @@
+ngx-smart-modal {
+    .nsm-content {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      width: 100%;
+      pointer-events: auto;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      outline: 0;
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 0px 20px !important;
+      margin: unset !important;
+    }
+  
+    .nsm-dialog {
+      margin-top: 40px !important;
+      margin-bottom: 40px !important;
+      max-width: none;
+      min-height: unset;
+      border-radius: 28px;
+    }
+  
+    .nsm-dialog-btn-close {
+      display: none;
+    }
+  
+    .modal-header .close {
+      padding: 1rem;
+      background-color: transparent;
+      border: 0;
+      -webkit-appearance: none;
+    }
+  
+    .modal-body {
+      padding: 10px 0px 10px 0px !important;
+      font-size: 1rem;
+    }
+  
+    .modal-title {
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 24px;
+      color: #000000;
+    }
+  
+    .save-btn {
+      background: #ebebf2;
+      border-radius: 12px;
+      padding: 0.7rem 3rem;
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      color: #9291a2;
+    }
+  
+    .modal-footer {
+      justify-content: flex-end;
+    }
+  
+    .modal-sm {
+      max-width: 350px !important;
+    }
+  
+    .modal-md {
+      max-width: 500px !important;
+    }
+  
+    .modal-lg {
+      max-width: 800px !important;
+    }
+  
+    .modal-xl {
+      max-width: 1140px !important;
+    }
+  }
+  
+  ngx-smart-modal .nsm-dialog:not(.app-model-v1) {
+    .modal-body {
+      label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+      }
+  
+      :not(ng-select) {
+        .add-form input {
+          background: #f6f6fa;
+          border-radius: 4px;
+          border: 1px solid #ced4da05;
+        }
+      }
+    }
+  }
+  
+  ngx-smart-modal .app-model-v1 {
+    .modal-header {
+      border-bottom: unset;
+    }
+  
+    .modal-body {
+      .form-group {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 15px;
+        color: #000000;
+  
+        & > label {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 15px;
+          color: #9c9caa;
+        }
+      }
+    }
+  }
