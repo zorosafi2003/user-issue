@@ -9,36 +9,29 @@ import { NgStackFormsModule } from '@ng-stack/forms';
 import { ToastrModule } from 'ng6-toastr-notifications';
 import { NgxCaptureModule } from 'ngx-capture';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
+import { LibConfigModel, LibConfigService } from '../core/models/lib-config.model';
 import { UserIssueLibComponent } from './user-issue-lib.component';
-
-export const LibConfigService = new InjectionToken<LibConfig>('LibConfig');
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [UserIssueLibComponent],
   imports: [
-    BrowserModule , CommonModule, HttpClientModule, ReactiveFormsModule ,NgStackFormsModule , FormsModule,
+    BrowserModule ,BrowserAnimationsModule, CommonModule, HttpClientModule, ReactiveFormsModule ,NgStackFormsModule , FormsModule,
     NgxCaptureModule, NgSelectModule, ToastrModule.forRoot(), NgxSmartModalModule.forRoot()
   ],
   exports: [UserIssueLibComponent]
 })
 export class UserIssueLibModule {
-   // public static forRoot(config: LibConfig): ModuleWithProviders {
-  //   return {
-  //     ngModule: UserIssueLibModule,
-  //     providers: [
-  //       {
-  //         provide: LibConfigService,
-  //         useValue: config
-  //       }
-  //     ]
-  //   }
-  // }
+   public static forRoot(config: LibConfigModel): ModuleWithProviders {
+    return {
+      ngModule: UserIssueLibModule,
+      providers: [
+        {
+          provide: LibConfigService,
+          useValue: config
+        }
+      ]
+    }
+  }
  }
-
-export interface LibConfig {
-  apiUrl: string;
-  appName: string;
-  appId: string;
-}
 

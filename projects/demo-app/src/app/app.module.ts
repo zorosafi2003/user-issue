@@ -9,7 +9,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule ,UserIssueLibModule
+    BrowserModule ,UserIssueLibModule.forRoot({
+      apiUrl:'',
+      appId:'',
+      appName:'Test App'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,5 +12,8 @@
     "ngx-smart-modal": "^7.2.1",
     "@ng-select/ng-select": "^3.0.7",
     "tslib": "^1.10.0"
+  },
+  "scripts": {
+    "build:sass": "sass assets/style.scss assets/style.css"
   }
 }

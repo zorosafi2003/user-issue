@@ -8,9 +8,16 @@ import { SendModel } from '../core/models/send.model';
 export class UserIssueLibService {
   private url;
 
-  constructor(private _HttpClient: HttpClient ){ }
+  constructor(private _HttpClient: HttpClient) { }
 
   send(model: SendModel) {
-    return this._HttpClient.post('', model)
+    const formData = new FormData();
+    formData.append('AppId', model.AppId);
+    formData.append('Description', model.Description);
+    formData.append('Image', model.Image);
+    formData.append('IssueType', model.IssueType);
+    formData.append('Priority', model.Priority);
+    formData.append('UserName', model.UserName);
+    return this._HttpClient.post('', formData)
   }
 }
